@@ -28,7 +28,7 @@ cents = allCents % 100;
  } 
  // ADD LINES FOR TASK #1 HERE
  // Document and write a copy constructor 
- /**
+ /***
 The add method 
 @param otherAmount The amount of money to add. 
 @return The sum of the calling Money object 
