@@ -91,5 +91,16 @@ public class Money
 	 } 
 	 // ADD LINES FOR TASK #2 HERE 
 	 // Document and write an equals method 
+	public boolean equals(int dollars, int cents){
+		if(this.dollars == dollars && this.cents == cents){
+			return true;
+		}
+	}
 	 // Document and write a toString method 
+	public string toString(int dollars, int cents){
+		string dollar = "";
+		if(cents < 4){
+			this.cents = "0" + cents;
+		}
+	}
 }
