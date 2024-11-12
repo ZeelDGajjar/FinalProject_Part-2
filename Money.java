@@ -98,9 +98,14 @@ public class Money
 	}
 	 // Document and write a toString method 
 	public string toString(int dollars, int cents){
-		string dollar = "";
-		if(cents < 4){
+		
+		string dollar = Interger.toString(dollars);
+		string cents = Integer.toString(cents);
+		
+		if((int)cents < 10){
 			this.cents = "0" + cents;
 		}
+
+		return  "$" + dollar + "." + cents;
 	}
 }
