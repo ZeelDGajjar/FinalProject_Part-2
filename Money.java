@@ -1,3 +1,12 @@
+
+
+/**
+ *
+ * @author 2474008
+ */
+/**
+ This class represents nonnegative amounts of money. 
+*/
 /**
  This class represents nonnegative amounts of money. 
 */
@@ -26,9 +35,9 @@ public class Money
 	 } 
 	 // ADD LINES FOR TASK #1 HERE
 	public Money (Money other){
-		this.sum = other.dollars;
+		this.dollars = other.dollars;
 		this.cents = other.cents;
-	}
+        }   
 	 /***
 	The add method 
 	@param otherAmount The amount of money to add. 
@@ -92,20 +101,10 @@ public class Money
 	 // ADD LINES FOR TASK #2 HERE 
 	 // Document and write an equals method 
 	public boolean equals(int dollars, int cents){
-		if(this.dollars == dollars && this.cents == cents){
-			return true;
-		}
+		return this.dollars == dollars && this.cents == cents;
 	}
 	 // Document and write a toString method 
-	public string toString(int dollars, int cents){
-		
-		string dollar = Interger.toString(dollars);
-		string cents = Integer.toString(cents);
-		
-		if((int)cents < 10){
-			this.cents = "0" + cents;
-		}
-
-		return  "$" + dollar + "." + cents;
+	public String toString(int dollars, int cents){
+		return  "$" + dollars + "." + (cents < 10 ? "0" + cents : cents);
 	}
 }
