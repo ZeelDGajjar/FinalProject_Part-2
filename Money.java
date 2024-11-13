@@ -34,9 +34,9 @@ public class Money
 		}
 	 } 
 	 // ADD LINES FOR TASK #1 HERE
-	public Money (Money other){
-		this.dollars = other.dollars;
-		this.cents = other.cents;
+	public Money (Money otherAmount){
+		this.dollars = otherAmount.dollars;
+		this.cents = otherAmount.cents;
         }   
 	 /***
 	The add method 
@@ -101,10 +101,11 @@ public class Money
 	 // ADD LINES FOR TASK #2 HERE 
 	 // Document and write an equals method 
 	public boolean equals(int dollars, int cents){
-		return this.dollars == dollars && this.cents == cents;
+		 return this.dollars == dollars && this.cents == cents;
 	}
 	 // Document and write a toString method 
 	public String toString(int dollars, int cents){
-		return  "$" + dollars + "." + (cents < 10 ? "0" + cents : cents);
+
+		 return  "$" + dollars + "." + (cents < 10 ? "0" + cents : cents);
 	}
 }
