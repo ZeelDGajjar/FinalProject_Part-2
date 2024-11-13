@@ -100,11 +100,11 @@ public class Money
 	 } 
 	 // ADD LINES FOR TASK #2 HERE 
 	 // Document and write an equals method 
-	public boolean equals(int dollars, int cents){
-		 return this.dollars == dollars && this.cents == cents;
+	public boolean equals(Money otherMoney){
+		 return this.dollars == otherMoney.dollars && this.cents == otherMoney.cents;
 	}
 	 // Document and write a toString method 
-	public String toString(int dollars, int cents){
+	public String toString(){
 
 		 return  "$" + dollars + "." + (cents < 10 ? "0" + cents : cents);
 	}
