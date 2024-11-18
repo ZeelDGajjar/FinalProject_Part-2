@@ -1,4 +1,4 @@
-
+package org.example;
 
 /**
  *
@@ -10,6 +10,7 @@
 /**
  This class represents nonnegative amounts of money. 
 */
+
 public class Money 
 {
 	 // The number of dollars 
@@ -23,8 +24,7 @@ public class Money
 	 public Money(double amount) 
 	 { 
 		if (amount < 0) {
-			System.out.println("Error: Negative amounts " + 
-			"of money are not allowed."); 
+			System.out.println("Error: Negative amounts " + "of money are not allowed.");
 			System.exit(0); 
 		}
 		else{
@@ -105,7 +105,6 @@ public class Money
 	}
 	 // Document and write a toString method 
 	public String toString(){
-
 		 return  "$" + dollars + "." + (cents < 10 ? "0" + cents : cents);
 	}
 }
