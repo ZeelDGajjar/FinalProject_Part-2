@@ -1,42 +1,41 @@
-package org.example;
 
 public class CreditCard {
     Person owner;
     Money balance;
-    Money CreditLimit;
+    Money creditLimit;
 
     public CreditCard( Person owner, Money creditLimit){
+        balance = new Money(0);
+        this.creditLimit = creditLimit;
         this.owner = owner;
-        this.CreditLimit = new Money(creditLimit);
-        this.balance = new Money(0);
     }
 
     public Money getBalance() {
-        return new Money(balance);
+        return this.balance;
     }
 
     public Money getCreditLimit() {
-        return new Money(CreditLimit);
+        return this.creditLimit;
     }
 
     public String getPersonals() {
-        return owner.toString();
+        return this.owner.toString();
     }
 
     public void charge(Money amount){
-        Money newBalance = new Money(balance);
 
-        if (newBalance.compareTo(getCreditLimit()) <= 0){
-            balance = newBalance;
-            System.out.println("Charge: " + amount);
+        if (this.balance.add(amount).compareTo(this.creditLimit) <= 0){
+            this.balance = this.balance.add(amount);
+            this.creditLimit = this.creditLimit.subtract(amount);
+            System.out.println("Charge:" + amount);
         } else {
             System.out.println("Exceeds credit limit");
         }
     }
 
     public void payment(Money amount){
-        balance = balance.subtract(amount);
-        System.out.println("Payment: " + amount);
+        this.balance = this.balance.subtract(amount);
+        System.out.println("Payment:" + amount);
     }
 
 }
