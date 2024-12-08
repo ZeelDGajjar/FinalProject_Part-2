@@ -3,9 +3,7 @@
  *
  * @author 2474008
  */
-/**
- This class represents nonnegative amounts of money. 
-*/
+
 /**
  This class represents nonnegative amounts of money. 
 */
