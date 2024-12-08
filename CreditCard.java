@@ -1,3 +1,7 @@
+/**
+ *
+ * @author 2474008
+ */
 
 public class CreditCard {
     Person owner;
