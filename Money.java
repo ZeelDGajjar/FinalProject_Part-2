@@ -1,3 +1,4 @@
+package org.example;
 
 /**
  *
@@ -30,11 +31,18 @@ public class Money
 			cents = allCents % 100; 
 		}
 	 } 
+
 	 // ADD LINES FOR TASK #1 HERE
+
+	/**
+	 * Task #1: Copy Constructor
+	 * Creates a new Money object by copying the values of another Money object.
+	 * @param otherAmount The Money object to copy.
+	 */
 	public Money (Money otherAmount){
-		this.dollars = otherAmount.dollars;
-		this.cents = otherAmount.cents;
-        }   
+		this.dollars = otherAmount.dollars; // Copy the dollar value
+		this.cents = otherAmount.cents; // Copy the cent value
+        }
 	 /***
 	The add method 
 	@param otherAmount The amount of money to add. 
@@ -46,9 +54,7 @@ public class Money
 		sum.cents = this.cents + otherAmount.cents; 
 		long carryDollars = sum.cents / 100; 
 		sum.cents = sum.cents % 100; 
-		sum.dollars = this.dollars + 
-		otherAmount.dollars + 
-		carryDollars; 
+		sum.dollars = this.dollars + otherAmount.dollars + carryDollars;
 		return sum; 
 	 }
 	 /**
@@ -95,12 +101,25 @@ public class Money
 			value = 0; 
 		return value; 
 	 } 
-	 // ADD LINES FOR TASK #2 HERE 
-	 // Document and write an equals method 
+
+	 // ADD LINES FOR TASK #2 HERE
+
+	// Document and write an equals method
+	/**
+	 * Compares the instance variables of the calling object with another Money object.
+	 * @param otherMoney The Money object to compare against.
+	 * @return true if both the dollars and cents are equal, false otherwise.
+	 */
 	public boolean equals(Money otherMoney){
 		 return this.dollars == otherMoney.dollars && this.cents == otherMoney.cents;
 	}
-	 // Document and write a toString method 
+
+	// Document and write a toString method
+	/**
+	 * Converts the Money object into a string representation.
+	 * @return A string in the format "$dollars.cents", ensuring cents are always
+	 *         displayed with two digits (e.g., $10.05 instead of $10.5).
+	 */
 	public String toString(){
 		 return  "$" + dollars + "." + (cents < 10 ? "0" + cents : cents);
 	}
