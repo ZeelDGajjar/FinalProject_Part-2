@@ -120,6 +120,7 @@ public class Money
 	 * @return A string in the format "$dollars.cents", ensuring cents are always
 	 *         displayed with two digits (e.g., $10.05 instead of $10.5).
 	 */
+	// return String.format("$%d.%02d", dollars, cents); ?
 	public String toString(){
 		 return  "$" + dollars + "." + (cents < 10 ? "0" + cents : cents);
 	}
